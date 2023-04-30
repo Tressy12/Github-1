@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 5</title>
+    <style>
+        div {
+            outline: 1px solid black;
+        }
+        #container {
+            display: grid;
+            grid-template-column: 1fr 1fr 1fr;
+            margin: auto;
+            max-width: 800px;
+        }
+        #blue {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 20px;
+            background-color: blue;
+            grid-column-start: 1; grid-column-end: 4;
+            drig-column: 1 / 4;
+            grid-template-column: 1fr 1fr 1fr
+        }
+        .red {
+            background-color: red;
+            height: 400px;
+         
+        }
+        #green {
+            display: grid;
+            grid-template-columns: 50% 50%
+            padding: 20px;
+            background-color: lime;
+            grid-column: 1 / 4;
+            height: 200px;
+        }
+        .yellow {
+            margin: 20px;
+            background-color: yellow;
+        }
+        .smallbox {
+            grid-column: 4 / 5;
+            height: 150px;
+        }
+        .thinbox {
+            grid-column: 1 / 2;
+        }
+        .bigbox {
+            grid-column: 2 / 4;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .big {
+            grid-column: 2 / 4;
+            grid-row: 1 / 3;
+        }
+        </style>
+</head>
+<body>
+    <div id="container">
+        <div id="blue">
+            <div class="yellow smallbox"></div>
+        </div>
+        <div class="red thinbox"></div>
+        <div class="red bigbox">
+            <div class="yellow"></div>
+            <div class="yellow big"></div>
+        </div>
+        <div id="green"></div>
+    </div>
+</body>
+
+</html>
